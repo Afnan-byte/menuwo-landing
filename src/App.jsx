@@ -16,6 +16,9 @@ import Footer from './components/Footer';
 
 const App = () => {
   const whatsappLink = "https://wa.me/918089685278?text=Hello%20Menuvo,%20I'm%20interested%20in%20elevating%20my%20restaurant%20with%20your%20digital%20menu%20solution.";
+  const instagramLink = "https://www.instagram.com/menuw.o/?hl=en";
+  const emailAddress = "info@menuwo.in";
+  const phoneNumber = "+918089685278";
 
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark selection:bg-brand-green/20 selection:text-brand-dark relative overflow-x-hidden">
@@ -31,7 +34,12 @@ const App = () => {
         <Pricing whatsappLink={whatsappLink} />
       </main>
 
-      <Footer whatsappLink={whatsappLink} />
+      <Footer 
+        whatsappLink={whatsappLink} 
+        instagramLink={instagramLink}
+        emailAddress={emailAddress}
+        phoneNumber={phoneNumber}
+      />
 
       {/* Floating WhatsApp Button */}
       <motion.a 
