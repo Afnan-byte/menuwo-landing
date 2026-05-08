@@ -25,10 +25,10 @@ const Hero = ({ onDemoClick, whatsappLink }) => {
             className="inline-flex items-center space-x-2 mb-6"
           >
             <span className="w-2.5 h-2.5 rounded-full bg-brand-green"></span>
-            <span className="text-sm font-bold text-gray-500 tracking-tight">Available for Demo</span>
+            <span className="text-sm font-semibold text-gray-500 tracking-tight">Available for Demo</span>
           </motion.div>
 
-          <h1 className="text-6xl md:text-8xl font-extrabold text-brand-dark leading-[1.05] mb-8 tracking-tighter">
+          <h1 className="text-6xl md:text-8xl font-bold text-brand-dark leading-[1.05] mb-8 tracking-tighter">
             The Future of <span className="text-brand-green">Digital</span> <br />
             <span className="text-brand-green">
               Menus
@@ -44,7 +44,7 @@ const Hero = ({ onDemoClick, whatsappLink }) => {
               whileHover={{ y: -4, shadow: "0 20px 25px -5px rgba(25, 111, 1, 0.3)" }}
               whileTap={{ scale: 0.98 }}
               onClick={() => window.open(whatsappLink)}
-              className="bg-[#196F01] text-white px-10 py-5 rounded-full font-bold text-lg transition-all shadow-xl hover:bg-green-700 w-full sm:w-72"
+              className="bg-[#196F01] text-white px-10 py-5 rounded-full font-semibold text-lg transition-all shadow-xl hover:bg-green-700 w-full sm:w-72"
             >
               Get Free Demo
             </motion.button>
@@ -53,7 +53,7 @@ const Hero = ({ onDemoClick, whatsappLink }) => {
               href="#features"
               whileHover={{ y: -4, backgroundColor: "rgba(1, 15, 30, 0.05)" }}
               whileTap={{ scale: 0.98 }}
-              className="flex items-center justify-center px-10 py-5 rounded-full border-2 border-brand-dark text-brand-dark font-bold text-lg transition-all w-full sm:w-72"
+              className="flex items-center justify-center px-10 py-5 rounded-full border-2 border-brand-dark text-brand-dark font-semibold text-lg transition-all w-full sm:w-72"
             >
               Explore Features
             </motion.a>

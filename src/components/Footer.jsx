@@ -26,10 +26,10 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
                  transition={{ delay: 0.2 }}
                  className="px-5 py-2 bg-white/5 backdrop-blur-md border border-white/10 rounded-full mb-8"
                >
-                  <span className="text-brand-green text-[10px] font-black uppercase tracking-[0.4em]">Limited Time Onboarding</span>
+                  <span className="text-brand-green text-[10px] font-bold uppercase tracking-[0.4em]">Limited Time Onboarding</span>
                </motion.div>
 
-               <h2 className="text-5xl md:text-8xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+               <h2 className="text-5xl md:text-8xl font-bold text-white mb-8 tracking-tighter leading-[0.9]">
                  Ready to <br className="md:hidden" />
                  <span className="text-brand-green">Evolve?</span>
                </h2>
@@ -43,7 +43,7 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
                     whileHover={{ y: -5, shadow: "0 25px 30px -10px rgba(25, 111, 1, 0.3)" }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.open(whatsappLink)}
-                    className="bg-brand-green text-white px-12 py-6 rounded-3xl font-black text-xl transition-all shadow-2xl w-full sm:w-auto"
+                    className="bg-brand-green text-white px-12 py-6 rounded-3xl font-bold text-xl transition-all shadow-2xl w-full sm:w-auto"
                   >
                     Start Free Trial
                   </motion.button>
@@ -52,7 +52,7 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
                     whileHover={{ backgroundColor: "rgba(255,255,255,0.05)" }}
                     whileTap={{ scale: 0.95 }}
                     onClick={() => window.open(whatsappLink)}
-                    className="bg-transparent border-2 border-white/10 text-white px-12 py-6 rounded-3xl font-black text-xl transition-all w-full sm:w-auto"
+                    className="bg-transparent border-2 border-white/10 text-white px-12 py-6 rounded-3xl font-bold text-xl transition-all w-full sm:w-auto"
                   >
                     Book a Call
                   </motion.button>
@@ -86,7 +86,7 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
           </div>
           
           <div className="flex flex-col items-center gap-6">
-            <div className="flex space-x-10 text-gray-400 text-sm font-bold uppercase tracking-widest">
+            <div className="flex space-x-10 text-gray-400 text-sm font-semibold uppercase tracking-widest">
               <a href="#problem" className="hover:text-brand-green transition-colors">Problem</a>
               <a href="#features" className="hover:text-brand-green transition-colors">Features</a>
               <a href="#pricing" className="hover:text-brand-green transition-colors">Pricing</a>
@@ -126,7 +126,7 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
           </div>
 
           <div className="hidden lg:flex flex-col items-end gap-2 text-right">
-            <span className="text-white font-bold text-sm">Direct Contact</span>
+            <span className="text-white font-semibold text-sm">Direct Contact</span>
             <a href={`tel:${phoneNumber}`} className="text-gray-400 hover:text-brand-green transition-colors font-medium">{phoneNumber}</a>
             <a href={`mailto:${emailAddress}`} className="text-gray-400 hover:text-brand-green transition-colors font-medium">{emailAddress}</a>
           </div>

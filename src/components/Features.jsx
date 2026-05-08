@@ -47,7 +47,7 @@ const Features = () => {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-5xl md:text-7xl font-bold text-brand-dark mb-4 tracking-tighter">Advanced <span className="text-brand-green">Capabilities</span></h2>
+            <h2 className="text-5xl md:text-7xl font-semibold text-brand-dark mb-4 tracking-tighter">Advanced <span className="text-brand-green">Capabilities</span></h2>
             <p className="text-brand-muted text-lg font-medium leading-relaxed">Built with cutting-edge technology to provide the fastest, most reliable digital menu experience on the market.</p>
           </motion.div>
 
@@ -57,7 +57,7 @@ const Features = () => {
             viewport={{ once: true }}
             className="hidden md:block"
           >
-            <div className="px-4 py-2 bg-brand-green/5 border border-brand-green/20 rounded-full text-brand-green text-xs font-bold uppercase tracking-widest">
+            <div className="px-4 py-2 bg-brand-green/5 border border-brand-green/20 rounded-full text-brand-green text-xs font-semibold uppercase tracking-widest">
               Enterprise Ready
             </div>
           </motion.div>
@@ -76,7 +76,7 @@ const Features = () => {
               <div className="w-14 h-14 rounded-2xl bg-white/5 flex items-center justify-center mb-8 border border-white/10 group-hover:bg-brand-green transition-colors duration-500">
                 <DevicePhoneMobileIcon className="w-7 h-7 text-brand-green group-hover:text-white" />
               </div>
-              <h3 className="text-3xl font-bold text-white mb-4">Liquid Display Optimization</h3>
+              <h3 className="text-3xl font-semibold text-white mb-4">Liquid Display Optimization</h3>
               <p className="text-gray-400 text-lg max-w-md leading-relaxed">
                 Our proprietary rendering engine automatically adapts your menu content to fit any screen size perfectly, ensuring your dishes look appetizing on every device.
               </p>
@@ -98,7 +98,7 @@ const Features = () => {
               <CloudArrowUpIcon className="w-7 h-7 text-brand-green group-hover:text-white" />
             </div>
             <div className="mt-12">
-              <h3 className="text-xl font-bold text-white mb-2">Global Cloud Sync</h3>
+               <h3 className="text-xl font-semibold text-white mb-2">Global Cloud Sync</h3>
               <p className="text-gray-400 text-sm">Update prices or hide out-of-stock items across all tables instantly.</p>
             </div>
           </motion.div>
@@ -113,7 +113,7 @@ const Features = () => {
                 <ChartBarIcon className="w-7 h-7 text-brand-green group-hover:text-white" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white mb-1">Deep Analytics</h3>
+                 <h3 className="text-xl font-semibold text-white mb-1">Deep Analytics</h3>
                 <p className="text-gray-400 text-sm">Understand guest behavior like never before.</p>
               </div>
             </div>
@@ -139,7 +139,7 @@ const Features = () => {
               <ShieldCheckIcon className="w-7 h-7 text-brand-green group-hover:text-white" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-white mb-1">Zero Friction</h3>
+               <h3 className="text-xl font-semibold text-white mb-1">Zero Friction</h3>
               <p className="text-gray-400 text-sm">No apps, no downloads, no physical contact. 100% web-based security.</p>
             </div>
           </motion.div>

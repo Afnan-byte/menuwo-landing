@@ -12,7 +12,7 @@ const Comparison = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-5xl md:text-7xl font-extrabold text-brand-dark mb-6 tracking-tighter"
+            className="text-5xl md:text-7xl font-bold text-brand-dark mb-6 tracking-tighter"
           >
             The Smart <span className="text-brand-green">Transition</span>
           </motion.h2>
@@ -36,8 +36,8 @@ const Comparison = () => {
                 <PrinterIcon className="w-7 h-7 text-orange-600" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-orange-900">Traditional Paper</h3>
-                <p className="text-orange-700/60 text-sm font-bold uppercase tracking-widest">The High-Cost Past</p>
+                <h3 className="text-2xl font-semibold text-orange-900">Traditional Paper</h3>
+                <p className="text-orange-700/60 text-sm font-semibold uppercase tracking-widest">The High-Cost Past</p>
               </div>
             </div>
 
@@ -64,7 +64,7 @@ const Comparison = () => {
 
           {/* VS Divider */}
           <div className="flex items-center justify-center">
-            <div className="w-16 h-16 rounded-full bg-brand-dark text-white font-black flex items-center justify-center shadow-2xl relative z-20 border-4 border-white">
+            <div className="w-16 h-16 rounded-full bg-brand-dark text-white font-bold flex items-center justify-center shadow-2xl relative z-20 border-4 border-white">
               VS
             </div>
           </div>
@@ -85,8 +85,8 @@ const Comparison = () => {
                 <DevicePhoneMobileIcon className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white">Menuvo Digital</h3>
-                <p className="text-brand-green text-sm font-bold uppercase tracking-widest">The High-Efficiency Future</p>
+                <h3 className="text-2xl font-semibold text-white">Menuvo Digital</h3>
+                <p className="text-brand-green text-sm font-semibold uppercase tracking-widest">The High-Efficiency Future</p>
               </div>
             </div>
 
@@ -100,7 +100,7 @@ const Comparison = () => {
               ].map((item, i) => (
                 <div key={i} className="flex items-start space-x-4">
                   <CheckIcon className="w-6 h-6 text-brand-green shrink-0 mt-1" />
-                  <p className="text-white font-bold text-lg leading-snug">{item}</p>
+                  <p className="text-white font-semibold text-lg leading-snug">{item}</p>
                 </div>
               ))}
             </div>
@@ -120,7 +120,7 @@ const Comparison = () => {
           viewport={{ once: true }}
           className="mt-24 text-center"
         >
-          <p className="text-brand-dark font-black text-2xl md:text-3xl leading-tight">
+          <p className="text-brand-dark font-bold text-2xl md:text-3xl leading-tight">
             It's not just a change. <br className="md:hidden" /> It's an <span className="text-brand-green underline decoration-brand-green/30 underline-offset-8">Evolution.</span>
           </p>
         </motion.div>

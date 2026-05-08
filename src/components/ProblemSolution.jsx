@@ -23,7 +23,7 @@ const ProblemSolution = () => {
             viewport={{ once: true }}
             className="max-w-2xl"
           >
-            <h2 className="text-5xl md:text-7xl font-black text-brand-dark mb-4 tracking-tighter">The Cost of <span className="text-red-500">Analog</span></h2>
+            <h2 className="text-5xl md:text-7xl font-bold text-brand-dark mb-4 tracking-tighter">The Cost of <span className="text-red-500">Analog</span></h2>
             <p className="text-brand-muted text-lg font-medium">Traditional paper menus aren't just dated—they are a significant financial drain on your business.</p>
           </motion.div>
           <motion.div
@@ -36,8 +36,8 @@ const ProblemSolution = () => {
               <XMarkIcon className="w-6 h-6 text-white" />
             </div>
             <div>
-              <p className="text-red-600 font-bold text-lg leading-tight">Net Loss</p>
-              <p className="text-red-400 text-xs font-bold uppercase tracking-widest">Calculated Annually</p>
+              <p className="text-red-600 font-semibold text-lg leading-tight">Net Loss</p>
+              <p className="text-red-400 text-xs font-semibold uppercase tracking-widest">Calculated Annually</p>
             </div>
           </motion.div>
         </div>
@@ -56,7 +56,7 @@ const ProblemSolution = () => {
               <div className="w-12 h-12 rounded-2xl bg-white border border-gray-200 flex items-center justify-center mb-8 group-hover:bg-red-50 transition-colors duration-500">
                 <loss.icon className="w-6 h-6 text-red-500" />
               </div>
-              <h3 className="text-brand-dark font-bold text-lg mb-2">{loss.title}</h3>
+              <h3 className="text-brand-dark font-semibold text-lg mb-2">{loss.title}</h3>
               <p className="text-brand-muted text-sm font-medium leading-relaxed">{loss.desc}</p>
             </motion.div>
           ))}
@@ -82,10 +82,10 @@ const ProblemSolution = () => {
                 viewport={{ once: true }}
                 transition={{ delay: 0.2 }}
               >
-                <span className="inline-block px-4 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/20 text-brand-green text-xs font-bold uppercase tracking-widest mb-6">
+                <span className="inline-block px-4 py-1.5 rounded-full bg-brand-green/10 border border-brand-green/20 text-brand-green text-xs font-semibold uppercase tracking-widest mb-6">
                   The Future is Here
                 </span>
-                <h3 className="text-5xl md:text-7xl font-black text-white mb-8 tracking-tighter leading-[0.9]">
+                <h3 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-[0.9]">
                   The Menuvo <br />
                   <span className="text-brand-green">Effect</span>
                 </h3>
@@ -93,7 +93,7 @@ const ProblemSolution = () => {
                   We transform recurring losses into high-efficiency growth with a platform that pays for itself in weeks, not months.
                 </p>
 
-                <button className="bg-brand-green hover:bg-brand-green/90 text-white px-8 py-4 rounded-2xl font-bold transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-brand-green/20">
+                <button className="bg-brand-green hover:bg-brand-green/90 text-white px-8 py-4 rounded-2xl font-semibold transition-all transform hover:scale-105 active:scale-95 shadow-xl shadow-brand-green/20">
                   Experience the Difference
                 </button>
               </motion.div>
@@ -119,7 +119,7 @@ const ProblemSolution = () => {
                     <item.icon className="w-6 h-6 text-brand-green group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h4 className="text-white font-bold text-lg leading-tight">{item.title}</h4>
+                    <h4 className="text-white font-semibold text-lg leading-tight">{item.title}</h4>
                     <p className="text-gray-500 text-sm font-medium mt-1">{item.desc}</p>
                   </div>
                 </motion.div>

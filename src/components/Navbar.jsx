@@ -39,7 +39,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
             <a
               key={link.name}
               href={link.href}
-              className="text-sm font-semibold text-brand-muted hover:text-brand-dark transition-all relative group py-2"
+              className="text-sm font-medium text-brand-muted hover:text-brand-dark transition-all relative group py-2"
             >
               {link.name}
               <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-0 h-1 bg-brand-green rounded-full transition-all group-hover:w-1.5 group-hover:h-1.5 group-hover:bottom-[-4px]"></span>
@@ -50,7 +50,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
         <div>
           <button
             onClick={() => window.open(whatsappLink)}
-            className="bg-brand-dark text-white px-7 py-2.5 rounded-full font-semibold text-sm hover:bg-brand-green transition-all shadow-md hover:shadow-brand-green/20 active:scale-95"
+            className="bg-brand-dark text-white px-7 py-2.5 rounded-full font-medium text-sm hover:bg-brand-green transition-all shadow-md hover:shadow-brand-green/20 active:scale-95"
           >
             Get Free Demo
           </button>

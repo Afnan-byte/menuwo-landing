@@ -26,15 +26,15 @@ const BeforeAfter = () => {
                      >
                         <div className="inline-flex items-center space-x-2 px-3 py-1 bg-brand-green/10 border border-brand-green/20 rounded-full mb-8">
                            <SparklesIcon className="w-4 h-4 text-brand-green" />
-                           <span className="text-[10px] font-black text-brand-green uppercase tracking-widest">Next-Gen Experience</span>
+                           <span className="text-[10px] font-bold text-brand-green uppercase tracking-widest">Next-Gen Experience</span>
                         </div>
-                        <h2 className="text-5xl md:text-7xl font-black text-brand-dark mb-8 tracking-tighter leading-none">
+                        <h2 className="text-5xl md:text-7xl font-bold text-brand-dark mb-8 tracking-tighter leading-none">
                            The Interface of <br />
                            <span className="text-brand-green">Tomorrow</span>
                         </h2>
                         <p className="text-brand-muted text-lg md:text-xl font-medium leading-relaxed mb-12">
                            We've engineered a zero-friction digital environment that feels like a native app but works instantly in any mobile browser.
-                           <span className="text-brand-dark font-bold"> No downloads. No lag. No limits.</span>
+                           <span className="text-brand-dark font-semibold"> No downloads. No lag. No limits.</span>
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
@@ -46,7 +46,7 @@ const BeforeAfter = () => {
                                  <div className="w-10 h-10 rounded-xl bg-brand-green/5 flex items-center justify-center">
                                     <item.icon className="w-5 h-5 text-brand-green" />
                                  </div>
-                                 <h4 className="font-bold text-brand-dark">{item.title}</h4>
+                                 <h4 className="font-semibold text-brand-dark">{item.title}</h4>
                                  <p className="text-sm text-brand-muted font-medium">{item.desc}</p>
                               </div>
                            ))}
@@ -95,7 +95,7 @@ const BeforeAfter = () => {
                            {/* Categories */}
                            <div className="px-6 flex space-x-3 mb-8">
                               {['Menu', 'Specials', 'Drinks'].map((cat, i) => (
-                                 <div key={i} className={`px-4 py-2 rounded-full text-[10px] font-bold ${i === 0 ? 'bg-brand-green text-white shadow-lg shadow-brand-green/20' : 'bg-gray-100 text-gray-500'}`}>
+                                 <div key={i} className={`px-4 py-2 rounded-full text-[10px] font-semibold ${i === 0 ? 'bg-brand-green text-white shadow-lg shadow-brand-green/20' : 'bg-gray-100 text-gray-500'}`}>
                                     {cat}
                                  </div>
                               ))}
@@ -110,7 +110,7 @@ const BeforeAfter = () => {
                                        <div className="h-2 w-24 bg-gray-200 rounded-full"></div>
                                        <div className="h-2 w-16 bg-gray-100 rounded-full"></div>
                                     </div>
-                                    <div className="w-8 h-8 bg-brand-green/10 rounded-lg flex items-center justify-center text-brand-green font-bold text-xs">
+                                    <div className="w-8 h-8 bg-brand-green/10 rounded-lg flex items-center justify-center text-brand-green font-semibold text-xs">
                                        +
                                     </div>
                                  </div>
@@ -123,7 +123,7 @@ const BeforeAfter = () => {
                                  <div className="h-1.5 w-12 bg-white/20 rounded-full"></div>
                                  <div className="h-1.5 w-8 bg-white/10 rounded-full"></div>
                               </div>
-                              <div className="h-10 w-24 bg-brand-green rounded-xl flex items-center justify-center text-white text-[10px] font-bold shadow-lg shadow-brand-green/20">
+                              <div className="h-10 w-24 bg-brand-green rounded-xl flex items-center justify-center text-white text-[10px] font-semibold shadow-lg shadow-brand-green/20">
                                  View Order
                               </div>
                            </div>
@@ -148,13 +148,13 @@ const BeforeAfter = () => {
                      viewport={{ once: true }}
                      className="px-4 py-1.5 bg-brand-green/10 rounded-full inline-block mb-6 border border-brand-green/20"
                   >
-                     <span className="text-[10px] font-bold text-brand-green uppercase tracking-[0.3em]">Pure Identity Control</span>
+                     <span className="text-[10px] font-semibold text-brand-green uppercase tracking-[0.3em]">Pure Identity Control</span>
                   </motion.div>
                   <motion.h2
                      initial={{ opacity: 0, y: 20 }}
                      whileInView={{ opacity: 1, y: 0 }}
                      viewport={{ once: true }}
-                     className="text-5xl md:text-7xl font-black text-brand-dark mb-8 tracking-tighter leading-none"
+                     className="text-5xl md:text-7xl font-bold text-brand-dark mb-8 tracking-tighter leading-none"
                   >
                      Your Table. <br />
                      <span className="text-brand-green">Your Brand.</span>
@@ -174,7 +174,7 @@ const BeforeAfter = () => {
                      className="md:col-span-8 bg-gray-50 rounded-[3rem] p-12 border border-gray-100 relative overflow-hidden group"
                   >
                      <div className="relative z-10">
-                        <h3 className="text-3xl font-black text-brand-dark mb-4 tracking-tight">Custom Domain</h3>
+                        <h3 className="text-3xl font-bold text-brand-dark mb-4 tracking-tight">Custom Domain</h3>
                         <p className="text-brand-muted text-lg mb-8 max-w-sm">Use your own domain name (menu.yourrestaurant.com) for a 100% native brand experience.</p>
 
                         <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 inline-flex items-center space-x-4 max-w-full">
@@ -184,7 +184,7 @@ const BeforeAfter = () => {
                               <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
                            </div>
                            <div className="h-6 w-px bg-gray-200"></div>
-                           <p className="text-sm font-bold text-brand-dark overflow-hidden text-ellipsis whitespace-nowrap">https://menu.thegrillhouse.com</p>
+                           <p className="text-sm font-semibold text-brand-dark overflow-hidden text-ellipsis whitespace-nowrap">https://menu.thegrillhouse.com</p>
                         </div>
                      </div>
 
@@ -204,7 +204,7 @@ const BeforeAfter = () => {
                            <BoltIcon className="w-8 h-8 text-white" />
                         </div>
                         <div>
-                           <h3 className="text-2xl font-bold text-white mb-2">Instant Load</h3>
+                           <h3 className="text-2xl font-semibold text-white mb-2">Instant Load</h3>
                            <p className="text-gray-400 text-sm">Lightweight code for lightning fast scans.</p>
                         </div>
                      </div>
@@ -218,7 +218,7 @@ const BeforeAfter = () => {
                      transition={{ delay: 0.2 }}
                      className="md:col-span-5 bg-[#010F1D] rounded-[3rem] p-12 border border-white/5 relative overflow-hidden"
                   >
-                     <h3 className="text-2xl font-bold text-white mb-6">Visual Identity</h3>
+                     <h3 className="text-2xl font-semibold text-white mb-6">Visual Identity</h3>
                      <div className="flex flex-wrap gap-3">
                         {['#196F01', '#010F1E', '#FF5733', '#8B4513', '#2E8B57'].map(color => (
                            <motion.div
@@ -244,11 +244,11 @@ const BeforeAfter = () => {
                      className="md:col-span-7 bg-[#F1F5F9] rounded-[3rem] p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-12"
                   >
                      <div className="relative z-10 w-full md:w-1/2">
-                        <h3 className="text-3xl font-black text-brand-dark mb-4">The Premium Stand</h3>
+                        <h3 className="text-3xl font-bold text-brand-dark mb-4">The Premium Stand</h3>
                         <p className="text-brand-muted font-medium mb-6">Custom hardware designed to match your interior décor.</p>
                         <ul className="space-y-3">
                            {["Wood", "Acrylic", "Metal"].map(mat => (
-                              <li key={mat} className="flex items-center space-x-2 text-brand-dark font-bold text-sm">
+                              <li key={mat} className="flex items-center space-x-2 text-brand-dark font-semibold text-sm">
                                  <CheckIcon className="w-4 h-4 text-brand-green" />
                                  <span>{mat} Finishes</span>
                               </li>
@@ -258,10 +258,10 @@ const BeforeAfter = () => {
                      <div className="w-full md:w-1/2 flex justify-center">
                         <div className="w-48 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 flex flex-col items-center">
                            <div className="w-full h-40 bg-gray-50 rounded-xl mb-4 border border-dashed border-gray-200 flex items-center justify-center">
-                              <span className="text-[10px] font-bold text-gray-300 uppercase tracking-widest">QR SPACE</span>
+                              <span className="text-[10px] font-semibold text-gray-300 uppercase tracking-widest">QR SPACE</span>
                            </div>
                            <div className="w-12 h-12 bg-brand-dark rounded-full mb-3 flex items-center justify-center">
-                              <span className="text-[8px] font-bold text-white">LOGO</span>
+                              <span className="text-[8px] font-semibold text-white">LOGO</span>
                            </div>
                            <div className="h-1.5 w-24 bg-gray-100 rounded-full"></div>
                         </div>

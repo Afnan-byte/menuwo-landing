@@ -14,7 +14,7 @@ const Pricing = ({ whatsappLink }) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-7xl font-bold text-brand-dark mb-4 tracking-tighter">Transparent <span className="text-brand-green">Pricing</span></h2>
+          <h2 className="text-5xl md:text-7xl font-semibold text-brand-dark mb-4 tracking-tighter">Transparent <span className="text-brand-green">Pricing</span></h2>
           <p className="text-brand-muted text-lg font-medium">No hidden fees. Scale your digital infrastructure effortlessly.</p>
         </motion.div>
 
@@ -28,9 +28,9 @@ const Pricing = ({ whatsappLink }) => {
             whileHover={{ y: -10 }}
             className="bg-[#010F1D] p-8 rounded-[2.5rem] border border-[#196F01]/30 hover:border-[#196F01]/60 transition-all shadow-lg"
           >
-            <h3 className="text-xl font-bold text-white mb-2">Starter</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">Starter</h3>
             <p className="text-gray-400 text-sm mb-6 font-medium">Perfect for small cafes.</p>
-            <div className="text-4xl font-bold text-white mb-8">₹499<span className="text-lg text-gray-500 font-normal">/mo</span></div>
+            <div className="text-4xl font-semibold text-white mb-8">₹499<span className="text-lg text-gray-500 font-normal">/mo</span></div>
             <ul className="space-y-4 mb-8">
               {['Digital Menu Creation', 'Basic QR Code', 'Email Support'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
@@ -38,7 +38,7 @@ const Pricing = ({ whatsappLink }) => {
                 </li>
               ))}
             </ul>
-            <button onClick={() => window.open(whatsappLink)} className="w-full py-3 rounded-xl border border-white/10 text-white font-bold hover:bg-white/5 transition-colors">
+            <button onClick={() => window.open(whatsappLink)} className="w-full py-3 rounded-xl border border-white/10 text-white font-semibold hover:bg-white/5 transition-colors">
               Select Starter
             </button>
           </motion.div>
@@ -51,12 +51,12 @@ const Pricing = ({ whatsappLink }) => {
             whileHover={{ y: -10 }}
             className="bg-[#010F1D] p-10 rounded-[2.5rem] border-2 border-[#196F01] relative z-10 transition-all shadow-2xl shadow-brand-green/10"
           >
-            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-brand-green text-white text-[10px] font-bold rounded-full uppercase tracking-widest">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 px-4 py-1 bg-brand-green text-white text-[10px] font-semibold rounded-full uppercase tracking-widest">
               MOST POPULAR
             </div>
-            <h3 className="text-2xl font-bold text-white mb-2">Professional</h3>
-            <p className="text-brand-green text-sm mb-6 font-bold uppercase tracking-tight">For growing restaurants.</p>
-            <div className="text-5xl font-bold text-white mb-8">₹999<span className="text-lg text-gray-500 font-normal">/mo</span></div>
+            <h3 className="text-2xl font-semibold text-white mb-2">Professional</h3>
+            <p className="text-brand-green text-sm mb-6 font-semibold uppercase tracking-tight">For growing restaurants.</p>
+            <div className="text-5xl font-semibold text-white mb-8">₹999<span className="text-lg text-gray-500 font-normal">/mo</span></div>
             <ul className="space-y-4 mb-8">
               {['Premium Custom Design', 'Physical QR Stands (20)', 'Real-time Analytics', 'Priority 24/7 Support'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-100 font-medium">
@@ -64,7 +64,7 @@ const Pricing = ({ whatsappLink }) => {
                 </li>
               ))}
             </ul>
-            <button onClick={() => window.open(whatsappLink)} className="w-full py-4 rounded-full bg-brand-green text-white font-bold text-lg hover:bg-green-700 shadow-lg transition-all active:scale-95">
+            <button onClick={() => window.open(whatsappLink)} className="w-full py-4 rounded-full bg-brand-green text-white font-semibold text-lg hover:bg-green-700 shadow-lg transition-all active:scale-95">
               Upgrade Now
             </button>
           </motion.div>
@@ -77,9 +77,9 @@ const Pricing = ({ whatsappLink }) => {
             whileHover={{ y: -10 }}
             className="bg-[#010F1D] p-8 rounded-[2.5rem] border border-[#196F01]/30 hover:border-[#196F01]/60 transition-all shadow-lg"
           >
-            <h3 className="text-xl font-bold text-white mb-2">Enterprise</h3>
+            <h3 className="text-xl font-semibold text-white mb-2">Enterprise</h3>
             <p className="text-gray-400 text-sm mb-6 font-medium">For large hospitality chains.</p>
-            <div className="text-4xl font-bold text-white mb-8">Custom</div>
+            <div className="text-4xl font-semibold text-white mb-8">Custom</div>
             <ul className="space-y-4 mb-8">
               {['Multi-location Support', 'API Access', 'Dedicated Account Manager', 'Custom Integrations'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
@@ -87,7 +87,7 @@ const Pricing = ({ whatsappLink }) => {
                 </li>
               ))}
             </ul>
-            <button onClick={() => window.open(whatsappLink)} className="w-full py-3 rounded-xl border border-white/10 text-white font-bold hover:bg-white/5 transition-colors">
+            <button onClick={() => window.open(whatsappLink)} className="w-full py-3 rounded-xl border border-white/10 text-white font-semibold hover:bg-white/5 transition-colors">
               Contact Sales
             </button>
           </motion.div>
