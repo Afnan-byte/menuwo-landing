@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 import { CheckIcon, SparklesIcon, PaintBrushIcon, CubeTransparentIcon } from '@heroicons/react/24/outline';
 
 // Import local assets
@@ -8,6 +8,12 @@ import standAcrylic from '../assets/stand-acrylic.png';
 import standMetal from '../assets/stand-metal.png';
 
 const QRStands = () => {
+  const [loadedImages, setLoadedImages] = useState({});
+
+  const handleImageLoad = (id) => {
+    setLoadedImages(prev => ({ ...prev, [id]: true }));
+  };
+
   const standOptions = [
     {
       id: "wood",
@@ -82,11 +88,25 @@ const QRStands = () => {
               className="flex flex-col group"
             >
               <div className={`relative aspect-square mb-8 rounded-[3rem] overflow-hidden ${stand.color} border border-gray-100 shadow-xl group-hover:shadow-2xl transition-all duration-500`}>
+                
+                {/* Shimmer Loader */}
+                <AnimatePresence>
+                  {!loadedImages[stand.id] && (
+                    <motion.div 
+                      exit={{ opacity: 0 }}
+                      className="absolute inset-0 z-20 shimmer"
+                    />
+                  )}
+                </AnimatePresence>
+
                 <motion.img 
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: loadedImages[stand.id] ? 1 : 0 }}
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.8 }}
                   src={stand.image} 
                   alt={stand.name} 
+                  onLoad={() => handleImageLoad(stand.id)}
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -102,7 +122,6 @@ const QRStands = () => {
                   </div>
                 ))}
               </div>
-
             </motion.div>
           ))}
         </div>
