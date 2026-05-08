@@ -113,7 +113,10 @@ const Features = () => {
                 <ChartBarIcon className="w-7 h-7 text-brand-green group-hover:text-white" />
               </div>
               <div>
-                 <h3 className="text-xl font-semibold text-white mb-1">Deep Analytics</h3>
+                <div className="flex items-center space-x-3 mb-1">
+                  <h3 className="text-xl font-semibold text-white">Deep Analytics</h3>
+                  <span className="px-2 py-0.5 bg-brand-green/20 border border-brand-green/40 rounded text-[10px] font-bold text-brand-green uppercase tracking-widest">Custom</span>
+                </div>
                 <p className="text-gray-400 text-sm">Understand guest behavior like never before.</p>
               </div>
             </div>

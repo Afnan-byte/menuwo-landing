@@ -1,6 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckIcon, SparklesIcon, DevicePhoneMobileIcon, CursorArrowRaysIcon, BoltIcon } from '@heroicons/react/24/outline';
+import menuImage from '../assets/menu.png';
 
 const BeforeAfter = () => {
    return (
@@ -241,7 +242,7 @@ const BeforeAfter = () => {
                      whileInView={{ opacity: 1, y: 0 }}
                      viewport={{ once: true }}
                      transition={{ delay: 0.3 }}
-                     className="md:col-span-7 bg-[#F1F5F9] rounded-[3rem] p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-12"
+                     className="md:col-span-7 bg-[#F4F7F5] rounded-[3rem] p-12 border border-gray-100 relative overflow-hidden flex flex-col md:flex-row items-center gap-12"
                   >
                      <div className="relative z-10 w-full md:w-1/2">
                         <h3 className="text-3xl font-bold text-brand-dark mb-4">The Premium Stand</h3>
@@ -256,15 +257,16 @@ const BeforeAfter = () => {
                         </ul>
                      </div>
                      <div className="w-full md:w-1/2 flex justify-center">
-                        <div className="w-48 h-64 bg-white rounded-2xl shadow-2xl border border-gray-200 p-4 flex flex-col items-center">
-                           <div className="w-full h-40 bg-gray-50 rounded-xl mb-4 border border-dashed border-gray-200 flex items-center justify-center">
-                              <span className="text-[10px] font-semibold text-gray-300 uppercase tracking-widest">QR SPACE</span>
-                           </div>
-                           <div className="w-12 h-12 bg-brand-dark rounded-full mb-3 flex items-center justify-center">
-                              <span className="text-[8px] font-semibold text-white">LOGO</span>
-                           </div>
-                           <div className="h-1.5 w-24 bg-gray-100 rounded-full"></div>
-                        </div>
+                        <motion.div
+                           whileHover={{ scale: 1.05, rotate: 2 }}
+                           className="relative"
+                        >
+                           <img
+                              src={menuImage}
+                              alt="The Premium Stand"
+                              className="w-64 h-auto rounded-3xl object-cover"
+                           />
+                        </motion.div>
                      </div>
                   </motion.div>
 

@@ -30,9 +30,9 @@ const Pricing = ({ whatsappLink }) => {
           >
             <h3 className="text-xl font-semibold text-white mb-2">Starter</h3>
             <p className="text-gray-400 text-sm mb-6 font-medium">Perfect for small cafes.</p>
-            <div className="text-4xl font-semibold text-white mb-8">₹499<span className="text-lg text-gray-500 font-normal">/mo</span></div>
+            <div className="text-4xl font-semibold text-white mb-8">₹199<span className="text-lg text-gray-500 font-normal">/3mo</span></div>
             <ul className="space-y-4 mb-8">
-              {['Digital Menu Creation', 'Basic QR Code', 'Email Support'].map((item, i) => (
+              {['Digital Menu Creation', 'Basic Stand with Branding', 'Basic QR Code', 'Email Support'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>
@@ -56,9 +56,9 @@ const Pricing = ({ whatsappLink }) => {
             </div>
             <h3 className="text-2xl font-semibold text-white mb-2">Professional</h3>
             <p className="text-brand-green text-sm mb-6 font-semibold uppercase tracking-tight">For growing restaurants.</p>
-            <div className="text-5xl font-semibold text-white mb-8">₹999<span className="text-lg text-gray-500 font-normal">/mo</span></div>
+            <div className="text-5xl font-semibold text-white mb-8">₹499<span className="text-lg text-gray-500 font-normal">/3mo</span></div>
             <ul className="space-y-4 mb-8">
-              {['Premium Custom Design', 'Physical QR Stands (20)', 'Real-time Analytics', 'Priority 24/7 Support'].map((item, i) => (
+              {['Custom Domain', 'Color Preferences', 'Branding Included', 'Customisable Premium Stands', 'Priority 24/7 Support'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-100 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>
@@ -81,7 +81,7 @@ const Pricing = ({ whatsappLink }) => {
             <p className="text-gray-400 text-sm mb-6 font-medium">For large hospitality chains.</p>
             <div className="text-4xl font-semibold text-white mb-8">Custom</div>
             <ul className="space-y-4 mb-8">
-              {['Multi-location Support', 'API Access', 'Dedicated Account Manager', 'Custom Integrations'].map((item, i) => (
+              {['In-Menu Ordering', 'Advanced Analytics', 'Custom Stand Design', 'Bespoke POS Integration'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>
