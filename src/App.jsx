@@ -12,6 +12,7 @@ import BeforeAfter from './components/BeforeAfter';
 import Features from './components/Features';
 import Comparison from './components/Comparison';
 import Pricing from './components/Pricing';
+import QRStands from './components/QRStands';
 import Footer from './components/Footer';
 
 const App = () => {
@@ -31,6 +32,7 @@ const App = () => {
         <Comparison />
         <Features />
         <BeforeAfter /> {/* Acts as Demo Preview & Custom Stand */}
+        <QRStands />
         <Pricing whatsappLink={whatsappLink} />
       </main>
 

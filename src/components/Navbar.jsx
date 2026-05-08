@@ -33,6 +33,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
           {[
             { name: 'Problem', href: '#problem' },
             { name: 'Solution', href: '#solution' },
+            { name: 'Hardware', href: '#stands' },
             { name: 'Features', href: '#features' },
             { name: 'Pricing', href: '#pricing' },
           ].map((link) => (

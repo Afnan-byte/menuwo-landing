@@ -103,7 +103,7 @@ const ProblemSolution = () => {
               {[
                 { title: "Instant Updates", desc: "Live menu changes in seconds", icon: BoltIcon },
                 { title: "Zero Printing", desc: "Save lakhs on annual printing", icon: SparklesIcon },
-                { title: "Higher Upsell", desc: "AI-driven item suggestions", icon: ChartBarSquareIcon },
+                { title: "Cloud Control", desc: "Manage from anywhere", icon: ChartBarSquareIcon },
                 { title: "Data Insights", desc: "Know exactly what sells", icon: UserGroupIcon }
               ].map((item, i) => (
                 <motion.div
