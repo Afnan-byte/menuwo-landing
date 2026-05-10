@@ -55,7 +55,7 @@ const QRStands = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-5xl md:text-8xl font-bold text-brand-dark tracking-tighter"
+            className="text-5xl md:text-7xl font-bold text-brand-dark tracking-tighter"
           >
             Hardware that <br /> <span className="text-brand-green">Defines Your Space</span>
           </motion.h2>
