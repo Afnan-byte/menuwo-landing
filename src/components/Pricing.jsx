@@ -32,7 +32,7 @@ const Pricing = ({ whatsappLink }) => {
             <p className="text-gray-400 text-sm mb-6 font-medium">Perfect for small cafes.</p>
             <div className="text-4xl font-semibold text-white mb-8">₹199<span className="text-lg text-gray-500 font-normal">/3mo</span></div>
             <ul className="space-y-4 mb-8">
-              {['Digital Menu Creation', 'Basic Stand with Branding', 'Basic QR Code', 'Email Support'].map((item, i) => (
+              {['Digital Menu Creation', 'Basic Stand (Acrylic) 4 pieces', 'Basic QR Code', '24/7 Support'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>
