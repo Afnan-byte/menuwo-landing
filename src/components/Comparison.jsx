@@ -14,7 +14,7 @@ const Comparison = () => {
             viewport={{ once: true }}
             className="text-5xl md:text-7xl font-bold text-brand-dark mb-6 tracking-tighter"
           >
-            The Smart <span className="text-brand-green">Transition</span>
+            Why <span className="text-brand-green">Switch</span> to Digital?
           </motion.h2>
           <p className="text-brand-muted text-lg font-medium">
             Visualizing the difference between outdated paper and the digital future.
