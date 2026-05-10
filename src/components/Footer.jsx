@@ -76,7 +76,7 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
             <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
               <img 
                 src="/logo.svg" 
-                alt="Menuvo Logo" 
+                alt="Menuwo Logo" 
                 className="h-8 w-auto brightness-0 invert" 
               />
             </div>

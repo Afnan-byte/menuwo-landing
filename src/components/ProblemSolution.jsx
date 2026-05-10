@@ -86,7 +86,7 @@ const ProblemSolution = () => {
                   The Future is Here
                 </span>
                 <h3 className="text-5xl md:text-7xl font-bold text-white mb-8 tracking-tighter leading-[0.9]">
-                  The Menuvo <br />
+                  The Menuwo <br />
                   <span className="text-brand-green">Effect</span>
                 </h3>
                 <p className="text-gray-400 text-lg md:text-xl font-medium leading-relaxed mb-10">

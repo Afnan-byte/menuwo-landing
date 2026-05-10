@@ -69,7 +69,7 @@ const Comparison = () => {
             </div>
           </div>
 
-          {/* Menuvo Digital Menu Card */}
+          {/* Menuwo Digital Menu Card */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -85,7 +85,7 @@ const Comparison = () => {
                 <DevicePhoneMobileIcon className="w-7 h-7 text-white" />
               </div>
               <div>
-                <h3 className="text-2xl font-semibold text-white">Menuvo Digital</h3>
+                <h3 className="text-2xl font-semibold text-white">Menuwo Digital</h3>
                 <p className="text-brand-green text-sm font-semibold uppercase tracking-widest">The High-Efficiency Future</p>
               </div>
             </div>

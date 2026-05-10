@@ -16,7 +16,7 @@ import QRStands from './components/QRStands';
 import Footer from './components/Footer';
 
 const App = () => {
-  const whatsappLink = "https://wa.me/918089685278?text=Hello%20Menuvo,%20I'm%20interested%20in%20elevating%20my%20restaurant%20with%20your%20digital%20menu%20solution.";
+  const whatsappLink = "https://wa.me/918089685278?text=Hello%20Menuwo,%20I'm%20interested%20in%20elevating%20my%20restaurant%20with%20your%20digital%20menu%20solution.";
   const instagramLink = "https://www.instagram.com/menuw.o/?hl=en";
   const emailAddress = "info@menuwo.in";
   const phoneNumber = "+918089685278";
