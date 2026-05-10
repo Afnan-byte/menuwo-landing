@@ -24,7 +24,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
         <div className="flex items-center cursor-pointer group" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
           <img
             src="/logo.svg"
-            alt="Menuvo Logo"
+            alt="Menuwo - Best Digital Menu Kerala"
             className="h-8 md:h-10 w-auto transition-transform group-hover:scale-105"
           />
         </div>

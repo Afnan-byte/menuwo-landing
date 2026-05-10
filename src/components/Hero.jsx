@@ -29,14 +29,14 @@ const Hero = ({ onDemoClick, whatsappLink }) => {
           </motion.div>
 
           <h1 className="text-6xl md:text-8xl font-bold text-brand-dark leading-[1.05] mb-8 tracking-tighter">
-            The Future of <span className="text-brand-green">Digital</span> <br />
+            The Future of <span className="text-brand-green">Digital Menu</span> <br />
             <span className="text-brand-green">
-              Menus
+              Systems in Kerala
             </span>
           </h1>
 
           <p className="text-lg md:text-xl text-brand-muted font-medium mb-12 leading-relaxed max-w-xl">
-            Elevate your hospitality with instant-load digital menus. Contactless, customizable, and designed for modern dining environments.
+            Elevate your hospitality with the #1 <strong>restaurant QR menu</strong> in Kerala. Contactless, customizable, and designed for modern cafes and dining environments.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5">

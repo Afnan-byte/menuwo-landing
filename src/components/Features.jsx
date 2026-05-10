@@ -48,7 +48,7 @@ const Features = () => {
             className="max-w-2xl"
           >
             <h2 className="text-5xl md:text-7xl font-semibold text-brand-dark mb-4 tracking-tighter">Advanced <span className="text-brand-green">Capabilities</span></h2>
-            <p className="text-brand-muted text-lg font-medium leading-relaxed">Built with cutting-edge technology to provide the fastest, most reliable digital menu experience on the market.</p>
+            <p className="text-brand-muted text-lg font-medium leading-relaxed">Built with cutting-edge technology to provide the fastest, most reliable <strong>digital menu system in Kerala</strong>, optimized for modern dining and guest engagement.</p>
           </motion.div>
 
           <motion.div

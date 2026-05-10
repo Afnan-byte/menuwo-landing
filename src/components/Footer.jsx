@@ -81,7 +81,10 @@ const Footer = ({ whatsappLink, instagramLink, emailAddress, phoneNumber }) => {
               />
             </div>
             <p className="text-gray-500 text-sm font-medium">
-              © {new Date().getFullYear()} Menuvo. All rights reserved.
+              Leading Digital Menu & QR Menu System in Kerala.
+            </p>
+            <p className="text-gray-500 text-[10px] font-medium opacity-50">
+              © {new Date().getFullYear()} Menuwo. All rights reserved.
             </p>
           </div>
           

@@ -63,7 +63,7 @@ const QRStands = () => {
             transition={{ delay: 0.1 }}
             className="text-5xl md:text-7xl font-bold text-brand-dark mb-8 tracking-tighter"
           >
-            Hardware Designed <br /> to <span className="text-brand-green">Match Your Decor</span>
+            Custom <span className="text-brand-green">QR Stands</span> & <br /> Restaurant Branding
           </motion.h2>
           <motion.p
              initial={{ opacity: 0, y: 20 }}
@@ -72,7 +72,7 @@ const QRStands = () => {
              transition={{ delay: 0.2 }}
              className="text-brand-muted text-xl max-w-2xl mx-auto font-medium"
           >
-            Don't settle for cheap stickers. Elevate your table presence with our customisable, professional QR stands.
+            Don't settle for cheap stickers. Elevate your table presence with our <strong>custom QR stands</strong> and professional branding solutions for restaurants and cafes in Kerala.
           </motion.p>
         </div>
 
@@ -105,7 +105,7 @@ const QRStands = () => {
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.8 }}
                   src={stand.image} 
-                  alt={stand.name} 
+                  alt={`${stand.name} - Custom QR Stand for Restaurants & Cafes in Kerala`} 
                   onLoad={() => handleImageLoad(stand.id)}
                   className="w-full h-full object-cover"
                 />
