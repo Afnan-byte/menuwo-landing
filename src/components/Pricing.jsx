@@ -81,7 +81,7 @@ const Pricing = ({ whatsappLink }) => {
             <p className="text-gray-400 text-sm mb-6 font-medium">For large hospitality chains.</p>
             <div className="text-4xl font-semibold text-white mb-8">Custom</div>
             <ul className="space-y-4 mb-8">
-              {['In-Menu Ordering', 'Advanced Analytics', 'Custom Stand Design', 'Bespoke POS Integration'].map((item, i) => (
+              {['In-Menu Ordering', 'Advanced Analytics', 'Customisable Stand Design', 'Bespoke POS Integration', 'Branding in stands'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>
