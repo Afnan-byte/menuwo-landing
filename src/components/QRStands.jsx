@@ -61,21 +61,21 @@ const QRStands = () => {
           </motion.h2>
         </div>
 
-        {/* Simplified Cinematic List */}
-        <div className="space-y-40">
+        {/* Simplified Grid List */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-16">
           {standOptions.map((stand, i) => (
             <motion.div
               key={stand.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className={`flex flex-col ${i % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-16 md:gap-24`}
+              transition={{ duration: 0.8, delay: i * 0.2 }}
+              className="flex flex-col group"
             >
               {/* Image Side */}
-              <div className="w-full lg:w-3/5 relative group">
-                <div className={`absolute inset-0 bg-gradient-to-tr ${stand.themeColor} rounded-[4rem] -rotate-2 scale-105 group-hover:rotate-0 transition-transform duration-700`}></div>
-                <div className="relative aspect-[16/9] md:aspect-[21/9] rounded-[3.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-white">
+              <div className="relative mb-10">
+                <div className={`absolute inset-0 bg-gradient-to-tr ${stand.themeColor} rounded-[3rem] -rotate-3 scale-105 group-hover:rotate-0 transition-transform duration-700`}></div>
+                <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 bg-white">
                   <AnimatePresence>
                     {!loadedImages[stand.id] && (
                       <motion.div 
@@ -98,17 +98,8 @@ const QRStands = () => {
               </div>
               
               {/* Content Side - Just Heading */}
-              <div className="w-full lg:w-2/5 text-center lg:text-left">
-                <div className="max-w-md mx-auto lg:mx-0">
-                   <h3 className="text-5xl md:text-7xl font-bold text-brand-dark mb-8 tracking-tight">{stand.name}</h3>
-                   <motion.button
-                     whileHover={{ x: 10 }}
-                     className="flex items-center space-x-3 text-brand-dark font-bold text-lg group mx-auto lg:mx-0"
-                   >
-                     <span>Request Sample</span>
-                     <span className="w-10 h-1 bg-brand-green group-hover:w-16 transition-all duration-300"></span>
-                   </motion.button>
-                </div>
+              <div className="text-center">
+                 <h3 className="text-3xl md:text-4xl font-bold text-brand-dark tracking-tight">{stand.name}</h3>
               </div>
             </motion.div>
           ))}
