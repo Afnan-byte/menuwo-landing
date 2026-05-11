@@ -31,7 +31,7 @@ const Pricing = ({ whatsappLink }) => {
             <h3 className="text-xl font-semibold text-white mb-2">Starter</h3>
             <p className="text-gray-400 text-sm mb-6 font-medium">Perfect for small cafes.</p>
             <div className="flex flex-col mb-8">
-              <div className="text-4xl font-semibold text-white">₹999</div>
+              <div className="text-4xl font-semibold text-white">₹1,299</div>
               <div className="text-sm text-gray-500 font-medium">One-time setup fee</div>
               <div className="mt-2 text-xl text-brand-green font-bold">+ ₹299<span className="text-sm text-gray-500 font-normal">/mo</span></div>
             </div>
