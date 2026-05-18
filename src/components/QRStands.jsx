@@ -90,7 +90,7 @@ const QRStands = () => {
                     whileHover={{ scale: 1.05 }}
                     transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
                     src={stand.image} 
-                    alt={`${stand.name} - Custom QR Stand for Restaurants & Cafes in Kerala`} 
+                    alt={`${stand.name} - Custom NFC + QR Stand for Restaurants & Cafes in Kerala`} 
                     onLoad={() => handleImageLoad(stand.id)}
                     className="w-full h-full object-cover"
                   />

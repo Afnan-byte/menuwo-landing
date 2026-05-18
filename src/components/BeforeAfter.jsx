@@ -167,7 +167,7 @@ const BeforeAfter = () => {
 
                <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
 
-                  {/* Bento Card 1: Domain/White Label */}
+                  {/* Bento Card 1: NFC + QR Tech */}
                   <motion.div
                      initial={{ opacity: 0, y: 20 }}
                      whileInView={{ opacity: 1, y: 0 }}
@@ -175,17 +175,25 @@ const BeforeAfter = () => {
                      className="md:col-span-8 bg-gray-50 rounded-[3rem] p-12 border border-gray-100 relative overflow-hidden group"
                   >
                      <div className="relative z-10">
-                        <h3 className="text-3xl font-bold text-brand-dark mb-4 tracking-tight">Custom Domain</h3>
-                        <p className="text-brand-muted text-lg mb-8 max-w-sm">Use your own domain name (menu.yourrestaurant.com) for a 100% native brand experience.</p>
+                        <h3 className="text-3xl font-bold text-brand-dark mb-4 tracking-tight">NFC + QR Smart Tech</h3>
+                        <p className="text-brand-muted text-lg mb-8 max-w-sm">Give customers instant access with a simple tap via NFC or a quick scan of the premium QR code.</p>
 
-                        <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 inline-flex items-center space-x-4 max-w-full">
-                           <div className="flex space-x-1.5">
-                              <div className="w-2.5 h-2.5 rounded-full bg-red-400"></div>
-                              <div className="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
-                              <div className="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+                        <div className="bg-white p-4 rounded-2xl shadow-xl border border-gray-100 inline-flex items-center space-x-6 max-w-full">
+                           <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 bg-brand-green/10 rounded-full flex items-center justify-center">
+                                 <DevicePhoneMobileIcon className="w-5 h-5 text-brand-green" />
+                              </div>
+                              <p className="text-sm font-semibold text-brand-dark">Tap Phone</p>
                            </div>
                            <div className="h-6 w-px bg-gray-200"></div>
-                           <p className="text-sm font-semibold text-brand-dark overflow-hidden text-ellipsis whitespace-nowrap">https://menu.thegrillhouse.com</p>
+                           <div className="flex items-center gap-3">
+                              <div className="w-10 h-10 bg-brand-dark/5 rounded-full flex items-center justify-center">
+                                 <svg className="w-5 h-5 text-brand-dark" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                                 </svg>
+                              </div>
+                              <p className="text-sm font-semibold text-brand-dark">Scan QR</p>
+                           </div>
                         </div>
                      </div>
 

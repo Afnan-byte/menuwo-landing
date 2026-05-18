@@ -36,7 +36,7 @@ const Hero = ({ onDemoClick, whatsappLink }) => {
           </h1>
 
           <p className="text-lg md:text-xl text-brand-muted font-medium mb-12 leading-relaxed max-w-xl">
-            Elevate your hospitality with the #1 <strong>restaurant QR menu</strong> in Kerala. Contactless, customizable, and designed for modern cafes and dining environments.
+            Elevate your hospitality with the #1 <strong>restaurant NFC & QR menu</strong> in Kerala. Contactless, customizable, and designed for modern cafes and dining environments.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center gap-5">

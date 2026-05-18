@@ -66,7 +66,7 @@ const Pricing = ({ whatsappLink }) => {
               <div className="mt-2 text-2xl text-white font-bold">+ ₹299<span className="text-sm text-gray-500 font-normal">/mo</span></div>
             </div>
             <ul className="space-y-4 mb-8">
-              {['Digital Menu Creation', 'Dashboard Access', 'Premium Stands (Wood, Acrylic, Steel) - 4 pieces', 'Setup in 24 hrs', 'Priority 24/7 Support'].map((item, i) => (
+              {['Digital Menu Creation', 'Dashboard Access', 'Premium Stands (Wood, Acrylic, Steel) - 4 pieces', 'NFC Enabled', 'Setup in 24 hrs', 'Priority 24/7 Support'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-100 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>
@@ -89,7 +89,7 @@ const Pricing = ({ whatsappLink }) => {
             <p className="text-gray-400 text-sm mb-6 font-medium">For large hospitality chains.</p>
             <div className="text-4xl font-semibold text-white mb-8">Custom</div>
             <ul className="space-y-4 mb-8">
-              {['Digital Menu Creation', 'Dashboard Access', 'Branding Included', 'Customisable Stand Design', 'Bespoke POS Integration'].map((item, i) => (
+              {['Digital Menu Creation', 'Dashboard Access', 'Branding Included', 'NFC Enabled', 'Customisable Stand Design', 'Bespoke POS Integration'].map((item, i) => (
                 <li key={i} className="flex items-center text-sm text-gray-300 font-medium">
                   <CheckIcon className="w-5 h-5 text-brand-green mr-3" /> {item}
                 </li>

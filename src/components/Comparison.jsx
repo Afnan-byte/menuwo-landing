@@ -95,7 +95,7 @@ const Comparison = () => {
                 "Instant updates with zero printing costs",
                 "100% Contactless, safe, and always clean",
                 "Real-time analytics on guest behavior",
-                "Instant access via QR — No waiting time",
+                "Instant access via NFC & QR — No waiting time",
                 "Unlimited space for stunning retina visuals"
               ].map((item, i) => (
                 <div key={i} className="flex items-start space-x-4">
