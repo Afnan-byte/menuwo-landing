@@ -34,7 +34,7 @@ const App = () => {
         <Comparison />
         <Features />
         <BeforeAfter /> {/* Acts as Demo Preview & Custom Stand */}
-        <QRStands />
+        {/* <QRStands /> */}
         <NFCSection whatsappLink={whatsappLink} />
         <FAQ />
         <Pricing whatsappLink={whatsappLink} />
