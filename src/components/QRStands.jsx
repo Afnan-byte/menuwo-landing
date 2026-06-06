@@ -90,10 +90,6 @@ const QRStands = () => {
                         
                         <div className="w-28 h-28 bg-white p-2 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center relative">
                            <QrCodeIcon className="w-full h-full text-black" />
-                           {/* Decorative QR inner elements */}
-                           <div className="absolute top-3 left-3 w-3 h-3 border-2 border-black" />
-                           <div className="absolute top-3 right-3 w-3 h-3 border-2 border-black" />
-                           <div className="absolute bottom-3 left-3 w-3 h-3 border-2 border-black" />
                         </div>
                         
                         <div className={`mt-auto text-[10px] font-bold tracking-widest ${stand.textColor}`}>
