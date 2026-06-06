@@ -1,37 +1,36 @@
-import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { SparklesIcon, PaintBrushIcon, CubeTransparentIcon } from '@heroicons/react/24/outline';
-
-// Import local assets
-import standWood from '../assets/stand-wood.png';
-import standAcrylic from '../assets/stand-acrylic.png';
-import standMetal from '../assets/stand-metal.png';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { SparklesIcon, PaintBrushIcon, CubeTransparentIcon, QrCodeIcon } from '@heroicons/react/24/outline';
 
 const QRStands = () => {
-  const [loadedImages, setLoadedImages] = useState({});
-
-  const handleImageLoad = (id) => {
-    setLoadedImages(prev => ({ ...prev, [id]: true }));
-  };
 
   const standOptions = [
     {
       id: "wood",
       name: "Natural Wood",
-      image: standWood,
-      themeColor: "from-amber-900/10 to-transparent"
+      themeColor: "from-amber-900/10 to-transparent",
+      standBg: "bg-gradient-to-b from-[#e5cca4] to-[#cba370] border border-[#a87a41]",
+      standBase: "bg-[#4a2e16] w-[110%] h-6 -ml-[5%] rounded-t-sm shadow-xl",
+      textColor: "text-[#4a2e16]",
+      label: "SCAN FOR MENU"
     },
     {
       id: "acrylic",
       name: "Modern Acrylic",
-      image: standAcrylic,
-      themeColor: "from-sky-900/10 to-transparent"
+      themeColor: "from-yellow-500/10 to-transparent",
+      standBg: "bg-gradient-to-br from-yellow-300 to-yellow-500 shadow-lg border border-yellow-200/50 backdrop-blur-sm",
+      standBase: "bg-[#111] w-[80%] h-8 ml-[10%] rounded-t-xl shadow-2xl",
+      textColor: "text-gray-900",
+      label: "SCAN TO VIEW MENU"
     },
     {
       id: "metal",
       name: "Industrial Metal",
-      image: standMetal,
-      themeColor: "from-gray-900/10 to-transparent"
+      themeColor: "from-gray-500/10 to-transparent",
+      standBg: "bg-gradient-to-br from-gray-100 via-gray-300 to-gray-400 border-l border-t border-white shadow-[inset_-2px_-2px_10px_rgba(0,0,0,0.1)]",
+      standBase: "bg-gradient-to-r from-gray-400 to-gray-500 w-[100%] h-3 shadow-xl transform skew-x-[20deg] ml-2",
+      textColor: "text-gray-800",
+      label: "SCAN TO VIEW MENU"
     }
   ];
 
@@ -72,28 +71,40 @@ const QRStands = () => {
               transition={{ duration: 0.8, delay: i * 0.2 }}
               className="flex flex-col group"
             >
-              {/* Image Side */}
+              {/* Image Side -> CSS Design Side */}
               <div className="relative mb-10">
                 <div className={`absolute inset-0 bg-gradient-to-tr ${stand.themeColor} rounded-[3rem] -rotate-3 scale-105 group-hover:rotate-0 transition-transform duration-700`}></div>
-                <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 bg-white">
-                  <AnimatePresence>
-                    {!loadedImages[stand.id] && (
-                      <motion.div 
-                        exit={{ opacity: 0 }}
-                        className="absolute inset-0 z-20 shimmer"
-                      />
-                    )}
-                  </AnimatePresence>
-                  <motion.img 
-                    initial={{ opacity: 0, scale: 1.1 }}
-                    animate={{ opacity: loadedImages[stand.id] ? 1 : 0, scale: loadedImages[stand.id] ? 1 : 1.1 }}
+                <div className="relative aspect-square rounded-[2.5rem] overflow-hidden shadow-xl border border-gray-100 bg-white flex items-center justify-center p-10">
+                  
+                  {/* CSS Stand Representation */}
+                  <motion.div 
                     whileHover={{ scale: 1.05 }}
-                    transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-                    src={stand.image} 
-                    alt={`${stand.name} - Custom NFC + QR Stand for Restaurants & Cafes in Kerala`} 
-                    onLoad={() => handleImageLoad(stand.id)}
-                    className="w-full h-full object-cover"
-                  />
+                    transition={{ duration: 0.5, ease: "easeOut" }}
+                    className="w-full max-w-[200px] h-[260px] flex flex-col justify-end relative"
+                  >
+                     {/* Stand Body */}
+                     <div className={`w-full h-full rounded-2xl flex flex-col items-center pt-8 pb-4 px-4 absolute bottom-4 z-10 ${stand.standBg}`}>
+                        <div className={`text-2xl font-black tracking-tight mb-4 ${stand.textColor}`}>
+                          menu<span className={stand.id === 'wood' ? 'text-[#196F01]' : 'text-brand-green'}>wo</span>
+                        </div>
+                        
+                        <div className="w-28 h-28 bg-white p-2 rounded-lg shadow-sm border border-gray-200 flex items-center justify-center relative">
+                           <QrCodeIcon className="w-full h-full text-black" />
+                           {/* Decorative QR inner elements */}
+                           <div className="absolute top-3 left-3 w-3 h-3 border-2 border-black" />
+                           <div className="absolute top-3 right-3 w-3 h-3 border-2 border-black" />
+                           <div className="absolute bottom-3 left-3 w-3 h-3 border-2 border-black" />
+                        </div>
+                        
+                        <div className={`mt-auto text-[10px] font-bold tracking-widest ${stand.textColor}`}>
+                          {stand.label}
+                        </div>
+                     </div>
+                     
+                     {/* Stand Base */}
+                     <div className={`absolute bottom-0 z-20 ${stand.standBase}`} />
+                  </motion.div>
+
                 </div>
               </div>
               
