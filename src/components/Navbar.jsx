@@ -25,7 +25,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
           <img
             src="/logo.svg"
             alt="Menuwo - Best Digital Menu Kerala"
-            className="h-8 md:h-10 w-auto transition-transform group-hover:scale-105"
+            className="h-6 sm:h-8 md:h-10 w-auto transition-transform group-hover:scale-105"
           />
         </div>
 
@@ -51,7 +51,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
         <div>
           <button
             onClick={() => window.open(whatsappLink)}
-            className="bg-brand-dark text-white px-7 py-2.5 rounded-full font-medium text-sm hover:bg-brand-green transition-all shadow-md hover:shadow-brand-green/20 active:scale-95"
+            className="bg-brand-dark text-white px-5 py-2 sm:px-7 sm:py-2.5 rounded-full font-medium text-xs sm:text-sm hover:bg-brand-green transition-all shadow-md hover:shadow-brand-green/20 active:scale-95"
           >
             Get Free Demo
           </button>
