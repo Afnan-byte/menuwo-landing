@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Olive & Basil Emblem (Pure Logo) -->
+  <rect width="100" height="100" rx="28" fill="#2D5A27" />
+  <ellipse cx="50" cy="52" rx="14" ry="19" fill="#A7C957" transform="rotate(-15 50 52)" />
+  <path d="M36 34C41 29 53 29 60 36C58 46 48 50 41 43" fill="#F2E8CF" />
+  <circle cx="52" cy="52" r="4.5" fill="#2D5A27" />
+</svg>

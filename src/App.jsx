@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 // Icons
@@ -7,6 +7,7 @@ import { ChatBubbleLeftRightIcon } from '@heroicons/react/24/outline';
 // Components
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import Partners from './components/Partners';
 import ProblemSolution from './components/ProblemSolution';
 import BeforeAfter from './components/BeforeAfter';
 import Features from './components/Features';
@@ -16,12 +17,40 @@ import QRStands from './components/QRStands';
 import NFCSection from './components/NFCSection';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
+import Admin from './components/Admin';
 
 const App = () => {
+  const [currentPath, setCurrentPath] = useState(() => {
+    if (typeof window === 'undefined') return '/';
+    return window.location.pathname;
+  });
+
+  useEffect(() => {
+    const handlePopState = () => {
+      setCurrentPath(window.location.pathname);
+    };
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  }, []);
+
+  const isAdminPage = currentPath === '/m-admin' || currentPath.startsWith('/m-admin/');
+
   const whatsappLink = "https://wa.me/918089685278?text=Hello%20Menuwo,%20I'm%20interested%20in%20elevating%20my%20restaurant%20with%20your%20digital%20menu%20solution.";
   const instagramLink = "https://www.instagram.com/menuw.o/?hl=en";
   const emailAddress = "info@menuwo.in";
   const phoneNumber = "+918089685278";
+
+  // If navigating to /m-admin, display the secured Admin Portal
+  if (isAdminPage) {
+    return (
+      <Admin
+        onNavigateHome={() => {
+          window.history.pushState({}, '', '/');
+          setCurrentPath('/');
+        }}
+      />
+    );
+  }
 
   return (
     <div className="min-h-screen bg-brand-bg font-sans text-brand-dark selection:bg-brand-green/20 selection:text-brand-dark relative overflow-x-hidden">
@@ -30,6 +59,7 @@ const App = () => {
       
       <main className="relative z-10">
         <Hero onDemoClick={() => window.open(whatsappLink)} whatsappLink={whatsappLink} />
+        <Partners />
         <ProblemSolution />
         <Comparison />
         <Features />

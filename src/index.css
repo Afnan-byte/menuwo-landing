@@ -96,3 +96,34 @@ body {
   background: linear-gradient(to right, #f6f7f8 8%, #f0f1f3 18%, #f6f7f8 33%);
   background-size: 1000px 100%;
 }
+
+/* Partners Infinite Marquee */
+@keyframes marquee {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-50%, 0, 0);
+  }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+  will-change: transform;
+}
+
+/* Pause on hover, active interaction, and keyboard focus */
+.marquee-container:hover .animate-marquee,
+.marquee-container:focus-within .animate-marquee,
+.marquee-container.is-paused .animate-marquee {
+  animation-play-state: paused;
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation-play-state: paused !important;
+  }
+}

@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="none">
+  <!-- Brew & Co. Emblem (Pure Logo) -->
+  <rect width="100" height="100" rx="28" fill="#9A3412" />
+  <path d="M50 24V74" stroke="#FDE68A" stroke-width="5" stroke-linecap="round" />
+  <path d="M38 36C42 34 47 38 50 43" stroke="#FDE68A" stroke-width="5" stroke-linecap="round" />
+  <path d="M62 36C58 34 53 38 50 43" stroke="#FDE68A" stroke-width="5" stroke-linecap="round" />
+  <path d="M38 50C42 48 47 52 50 57" stroke="#FDE68A" stroke-width="5" stroke-linecap="round" />
+  <path d="M62 50C58 48 53 52 50 57" stroke="#FDE68A" stroke-width="5" stroke-linecap="round" />
+</svg>
