@@ -115,10 +115,42 @@ const Admin = ({ onNavigateHome }) => {
     });
   };
 
-  // Save all changes to localStorage
-  const handleSave = () => {
+  // Auto-sync localStorage to backend file on mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const stored = localStorage.getItem('menuwo_partners_data');
+      if (stored) {
+        try {
+          const parsed = JSON.parse(stored);
+          if (Array.isArray(parsed) && parsed.length > 0) {
+            fetch('/api/save-partners', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: stored,
+            }).catch(() => {});
+          }
+        } catch (e) {}
+      }
+    }
+  }, []);
+
+  // Save all changes to localStorage and codebase file
+  const handleSave = async () => {
     saveStoredPartners(partners);
-    showToast('All changes saved! Partner logos are updated on the live website.', 'success');
+    try {
+      const res = await fetch('/api/save-partners', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(partners),
+      });
+      if (res.ok) {
+        showToast('Saved to local storage and codebase! Ready to push.', 'success');
+        return;
+      }
+    } catch (err) {
+      console.warn('Backend file sync error:', err);
+    }
+    showToast('Saved to local browser storage!', 'success');
   };
 
   // Reset to initial seed partners
