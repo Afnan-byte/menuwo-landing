@@ -1,75 +1,48 @@
 /**
  * Partner logos data configuration & local persistence helpers.
- *
- * To add, edit, or replace a partner logo:
- * 1. Place your image/SVG file in the `public/partners/` folder (or use any valid public/remote URL).
- * 2. Update or add an entry in this list below, or use the admin portal at `/m-admin`.
+ * Automatically synchronized from /m-admin.
  */
 export const PARTNERS_DATA = [
   {
-    id: 'malabar-coastal',
-    name: 'Malabar Coastal Kitchen',
-    category: 'Fine Dining & Seafood',
-    logo: '/partners/malabar-coastal.svg',
-    alt: 'Malabar Coastal Kitchen logo - Partner Restaurant',
-    href: '#',
+    id: "riders-cafe",
+    name: "Riders Cafe",
+    category: "Cafe & Lounge",
+    logo: "https://res.cloudinary.com/da1edgae1/image/upload/v1791168165/kcmmqofnm0qkooydzxxd.webp",
+    alt: "Riders Cafe logo",
+    href: "#"
   },
   {
-    id: 'aroma-roastery',
-    name: 'Aroma Roastery & Cafe',
-    category: 'Artisan Coffee & Bistro',
-    logo: '/partners/aroma-roastery.svg',
-    alt: 'Aroma Roastery and Cafe logo - Partner Cafe',
-    href: '#',
+    id: "evergreen-continental",
+    name: "Evergreen Continental",
+    category: "Continental Dining",
+    logo: "https://res.cloudinary.com/da1edgae1/image/upload/v1791979752/ubmp6tzxftxuarprszfg.webp",
+    alt: "Evergreen Continental logo",
+    href: "#"
   },
   {
-    id: 'urban-bistro',
-    name: 'The Urban Bistro',
-    category: 'Modern European & Bar',
-    logo: '/partners/urban-bistro.svg',
-    alt: 'The Urban Bistro logo - Partner Restaurant',
-    href: '#',
+    id: "nells-cafe",
+    name: "Nells Cafe",
+    category: "Artisan Cafe",
+    logo: "https://res.cloudinary.com/da1edgae1/image/upload/v1790920181/irykysgaeyxwuu8fft55.webp",
+    alt: "Nells Cafe logo",
+    href: "#"
   },
   {
-    id: 'olive-basil',
-    name: 'Olive & Basil',
-    category: 'Authentic Italian Trattoria',
-    logo: '/partners/olive-basil.svg',
-    alt: 'Olive and Basil Trattoria logo - Partner Restaurant',
-    href: '#',
+    id: "tea-time",
+    name: "Tea Time",
+    category: "Tea & Beverages",
+    logo: "https://res.cloudinary.com/da1edgae1/image/upload/v1779891781/gvrfkekbiwwnwfomydpe.png",
+    alt: "Tea Time logo",
+    href: "#"
   },
   {
-    id: 'saffron-lounge',
-    name: 'Saffron Lounge',
-    category: 'Grand North Indian Dining',
-    logo: '/partners/saffron-lounge.svg',
-    alt: 'Saffron Lounge logo - Partner Restaurant',
-    href: '#',
-  },
-  {
-    id: 'brew-co',
-    name: 'Brew & Co. Bakehouse',
-    category: 'Artisan Bakery & Brunch',
-    logo: '/partners/brew-co.svg',
-    alt: 'Brew and Co Bakehouse logo - Partner Cafe',
-    href: '#',
-  },
-  {
-    id: 'rustic-grill',
-    name: 'The Rustic Grill',
-    category: 'Woodfire Steakhouse & BBQ',
-    logo: '/partners/rustic-grill.svg',
-    alt: 'The Rustic Grill logo - Partner Restaurant',
-    href: '#',
-  },
-  {
-    id: 'golden-leaf',
-    name: 'Golden Leaf Resorts',
-    category: 'Luxury Hospitality & Dining',
-    logo: '/partners/golden-leaf.svg',
-    alt: 'Golden Leaf Resorts and Dining logo - Partner Brand',
-    href: '#',
-  },
+    id: "zaffron-restaurant",
+    name: "Zaffron Restaurant",
+    category: "Fine Dining",
+    logo: "https://res.cloudinary.com/da1edgae1/image/upload/v1791427857/oll6w1zmekuxofbpjbzp.webp",
+    alt: "Zaffron Restaurant logo",
+    href: "#"
+  }
 ];
 
 export const PARTNERS_STORAGE_KEY = 'menuwo_partners_data';

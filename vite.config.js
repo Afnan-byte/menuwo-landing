@@ -10,6 +10,7 @@ export default defineConfig({
     {
       name: 'partners-api-sync',
       configureServer(server) {
+        // Save partners data to disk
         server.middlewares.use('/api/save-partners', (req, res) => {
           if (req.method === 'POST') {
             let body = '';
@@ -24,6 +25,8 @@ export default defineConfig({
                 }
 
                 const targetPath = path.resolve(__dirname, 'src/data/partners.js');
+                const currentContent = fs.existsSync(targetPath) ? fs.readFileSync(targetPath, 'utf-8') : '';
+
                 const fileContent = `/**
  * Partner logos data configuration & local persistence helpers.
  * Automatically synchronized from /m-admin.
@@ -78,8 +81,10 @@ export const resetStoredPartners = () => {
   }
 };
 `;
-                fs.writeFileSync(targetPath, fileContent, 'utf-8');
-                console.log('[API] Successfully synced partners data to src/data/partners.js');
+                if (currentContent.trim() !== fileContent.trim()) {
+                  fs.writeFileSync(targetPath, fileContent, 'utf-8');
+                  console.log('[API] Successfully synced partners data to src/data/partners.js');
+                }
 
                 res.statusCode = 200;
                 res.setHeader('Content-Type', 'application/json');
@@ -91,6 +96,38 @@ export const resetStoredPartners = () => {
                 res.end(JSON.stringify({ error: error.message }));
               }
             });
+          } else {
+            res.statusCode = 405;
+            res.end('Method Not Allowed');
+          }
+        });
+
+        // 1-Click Publish to GitHub and Live Site
+        server.middlewares.use('/api/publish-live', async (req, res) => {
+          if (req.method === 'POST') {
+            try {
+              const { exec } = await import('child_process');
+              const runCmd = (cmd) =>
+                new Promise((resolve, reject) => {
+                  exec(cmd, { cwd: __dirname }, (error, stdout, stderr) => {
+                    if (error) reject(stderr || stdout || error.message);
+                    else resolve(stdout);
+                  });
+                });
+
+              await runCmd('git add src/data/partners.js');
+              await runCmd('git commit -m "update: partner logos via admin portal"');
+              await runCmd('git push origin main');
+
+              res.statusCode = 200;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify({ success: true, message: 'Published to GitHub & Vercel!' }));
+            } catch (err) {
+              console.error('Publish error:', err);
+              res.statusCode = 500;
+              res.setHeader('Content-Type', 'application/json');
+              res.end(JSON.stringify({ error: String(err) }));
+            }
           } else {
             res.statusCode = 405;
             res.end('Method Not Allowed');

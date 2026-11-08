@@ -24,13 +24,14 @@ const Admin = ({ onNavigateHome }) => {
   const [partners, setPartners] = useState(() => getStoredPartners());
   const [toastMessage, setToastMessage] = useState(null);
   const [showExportModal, setShowExportModal] = useState(false);
+  const [isPublishing, setIsPublishing] = useState(false);
 
   // Show temporary toast notification
   const showToast = (message, type = 'success') => {
     setToastMessage({ message, type });
     setTimeout(() => {
       setToastMessage(null);
-    }, 3500);
+    }, 4500);
   };
 
   // Keyboard shortcut Ctrl/Cmd + S to save
@@ -115,42 +116,35 @@ const Admin = ({ onNavigateHome }) => {
     });
   };
 
-  // Auto-sync localStorage to backend file on mount
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const stored = localStorage.getItem('menuwo_partners_data');
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored);
-          if (Array.isArray(parsed) && parsed.length > 0) {
-            fetch('/api/save-partners', {
-              method: 'POST',
-              headers: { 'Content-Type': 'application/json' },
-              body: stored,
-            }).catch(() => {});
-          }
-        } catch (e) {}
-      }
-    }
-  }, []);
-
-  // Save all changes to localStorage and codebase file
+  // Save all changes locally and publish live for all users
   const handleSave = async () => {
     saveStoredPartners(partners);
+    setIsPublishing(true);
+
     try {
-      const res = await fetch('/api/save-partners', {
+      // 1. Sync to local file src/data/partners.js
+      await fetch('/api/save-partners', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(partners),
       });
-      if (res.ok) {
-        showToast('Saved to local storage and codebase! Ready to push.', 'success');
+
+      // 2. Automatically push to Git and deploy to menuwo.in for everyone
+      const pubRes = await fetch('/api/publish-live', {
+        method: 'POST',
+      });
+      const pubData = await pubRes.json();
+      if (pubData.success) {
+        showToast('Published Live! Updates are now being deployed to menuwo.in for everyone.', 'success');
+        setIsPublishing(false);
         return;
       }
     } catch (err) {
-      console.warn('Backend file sync error:', err);
+      console.warn('Live publish notice:', err);
     }
-    showToast('Saved to local browser storage!', 'success');
+
+    setIsPublishing(false);
+    showToast('Saved to codebase! Run push to deploy to production.', 'success');
   };
 
   // Reset to initial seed partners
@@ -394,12 +388,25 @@ const Admin = ({ onNavigateHome }) => {
 
             <button
               onClick={handleSave}
-              className="px-6 py-2.5 rounded-xl bg-brand-green hover:bg-green-700 text-white text-xs font-semibold flex items-center gap-2 shadow-lg shadow-brand-green/20 hover:shadow-xl transition-all"
+              disabled={isPublishing}
+              className="px-6 py-2.5 rounded-xl bg-brand-green hover:bg-green-700 disabled:opacity-70 text-white text-xs font-semibold flex items-center gap-2 shadow-lg shadow-brand-green/20 hover:shadow-xl transition-all"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-              </svg>
-              <span>Save Changes</span>
+              {isPublishing ? (
+                <>
+                  <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                  </svg>
+                  <span>Publishing Live...</span>
+                </>
+              ) : (
+                <>
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                  </svg>
+                  <span>Save &amp; Publish Live</span>
+                </>
+              )}
             </button>
           </div>
         </div>
@@ -544,12 +551,25 @@ const Admin = ({ onNavigateHome }) => {
         <div className="fixed bottom-6 right-8 z-40">
           <button
             onClick={handleSave}
-            className="px-6 py-3.5 rounded-full bg-brand-green hover:bg-green-700 text-white font-semibold text-sm shadow-2xl shadow-brand-green/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5"
+            disabled={isPublishing}
+            className="px-6 py-3.5 rounded-full bg-brand-green hover:bg-green-700 disabled:opacity-75 text-white font-semibold text-sm shadow-2xl shadow-brand-green/30 hover:scale-105 active:scale-95 transition-all flex items-center gap-2.5"
           >
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
-            </svg>
-            <span>Save All Partner Updates</span>
+            {isPublishing ? (
+              <>
+                <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                </svg>
+                <span>Publishing to menuwo.in...</span>
+              </>
+            ) : (
+              <>
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" />
+                </svg>
+                <span>Save &amp; Publish Live for Everyone</span>
+              </>
+            )}
           </button>
         </div>
       </main>

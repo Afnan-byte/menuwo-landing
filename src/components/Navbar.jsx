@@ -17,7 +17,7 @@ const Navbar = ({ onDemoClick, whatsappLink }) => {
       initial={{ y: -100, x: "-50%" }}
       animate={{ y: 0, x: "-50%" }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className={`fixed z-[100] transition-all duration-300 left-1/2 w-[95%] md:w-[90%] lg:max-w-6xl ${scrolled ? 'top-4 glass py-3 rounded-full shadow-md border border-gray-200' : 'top-6 bg-brand-bg py-4 rounded-full border border-gray-200 shadow-sm'}`}
+      className={`fixed z-[100] transition-all duration-300 left-1/2 w-[95%] md:w-[90%] lg:max-w-6xl ${scrolled ? 'top-4 bg-white/95 backdrop-blur-md py-3 rounded-full shadow-md border border-gray-200' : 'top-6 bg-white py-4 rounded-full border border-gray-200 shadow-sm'}`}
     >
       <div className="px-6 md:px-10 flex justify-between items-center">
 
